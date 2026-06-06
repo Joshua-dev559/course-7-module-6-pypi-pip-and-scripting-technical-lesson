@@ -1,12 +1,11 @@
-# Entry script that should call the reporting logic from lib/report_generator.py
+from lib.report_generator import generate_csv_report
 
-# TODO: Import your report generator module
-# from lib.report_generator import generate_csv_report
 
 def main():
-    # TODO: Call generate_csv_report()
-    # This script will be run using `python generate_report.py`
-    pass
+    """Run the report generation entry point."""
+    filename = generate_csv_report()
+    print(f"Report saved as {filename}")
+
 
 if __name__ == "__main__":
     main()
